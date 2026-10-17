@@ -1,142 +1,25 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>E-Commerce Data Analysis Project</title>
-<style>
-body{margin:0;font-family:Arial;background:#f4f6fa;color:#263247}
-header{background:#14213d;color:white;text-align:center;padding:35px 15px}
-nav{text-align:center;background:#243b60;padding:15px}
-nav a{color:white;margin:10px;text-decoration:none}
-main{max-width:950px;margin:auto;padding:20px}
-section{background:white;padding:22px;margin:20px 0;border-radius:10px}
-h2{color:#176b87}
-pre{background:#172033;color:#e7f1ff;padding:15px;overflow:auto;border-radius:6px}
-a{color:#087e8b}
-footer{text-align:center;padding:20px;background:#14213d;color:white}
-</style>
+    <title>E-Commerce Data Analysis</title>
 </head>
 <body>
-<header>
-<h1>E-Commerce Product Price & Review Analysis</h1>
-<p>Data Analytics Project Using Flipkart Product Data</p>
-</header>
+    <h1>E-Commerce Product Price & Review Analysis</h1>
+    <p>Welcome to my E-Commerce Data Analysis Project.</p>
 
-<nav>
-<a href="#about">About</a>
-<a href="#cleaning">Data Cleaning</a>
-<a href="#sql">SQL</a>
-<a href="#python">Python EDA</a>
-<a href="#powerbi">Power BI</a>
-<a href="#conclusion">Conclusion</a>
-</nav>
+    <h2>Project Overview</h2>
+    <p>This project analyses product prices, brands, ratings,
+    reviews, and discounts using Flipkart data.</p>
 
-<main>
-<section id="about">
-<h2>1. Project Overview</h2>
-<p>This project analyses e-commerce product data collected
-from Flipkart to understand prices, brands, ratings,
-reviews and discounts.</p>
-<h3>Objectives</h3>
-<ul>
-<li>Analyse product prices and discounts.</li>
-<li>Compare brands and customer ratings.</li>
-<li>Identify popular products using review counts.</li>
-<li>Perform data cleaning and exploratory data analysis.</li>
-<li>Create an interactive Power BI dashboard.</li>
-</ul>
-<h3>Technologies Used</h3>
-<p>Microsoft Excel, PostgreSQL, SQL, Python, Pandas and Power BI.</p>
-</section>
+    <h2>Technologies Used</h2>
+    <p>Excel, PostgreSQL, Python, Power BI</p>
 
-<section id="cleaning">
-<h2>2. Data Cleaning & Preprocessing</h2>
-<ul>
-<li>Checked missing values.</li>
-<li>Identified duplicate records.</li>
-<li>Checked and corrected data types.</li>
-<li>Reviewed product names and categories for consistency.</li>
-<li>Prepared data for analysis.</li>
-</ul>
-</section>
-
-<section id="sql">
-<h2>3. SQL Analysis – PostgreSQL</h2>
-<p>Sample queries used for product analysis.</p>
-<h3>Display All Products</h3>
-<pre><code>SELECT *
-FROM ecommerce_products1;</code></pre>
-<h3>Total Products</h3>
-<pre><code>SELECT COUNT(*) AS total_products
-FROM ecommerce_products1;</code></pre>
-<h3>Average Product Price</h3>
-<pre><code>SELECT ROUND(AVG(price), 2) AS average_price
-FROM ecommerce_products1;</code></pre>
-<h3>Products by Brand</h3>
-<pre><code>SELECT brand, COUNT(*) AS product_count
-FROM ecommerce_products1
-GROUP BY brand
-ORDER BY product_count DESC;</code></pre>
-<h3>Highest Rated Products</h3>
-<pre><code>SELECT product_name, brand, price, rating
-FROM ecommerce_products1
-WHERE rating IS NOT NULL
-ORDER BY rating DESC
-LIMIT 10;</code></pre>
-</section>
-
-<section id="python">
-<h2>4. Python – Exploratory Data Analysis</h2>
-<p>Python and Pandas are used to inspect the dataset,
-check missing values and analyse product prices.</p>
-<pre><code>import pandas as pd
-import matplotlib.pyplot as plt
-
-df = pd.read_csv("ecommerce_products.csv")
-
-print(df.head())
-print(df.info())
-print(df.isnull().sum())
-print(df.duplicated().sum())
-print(df.describe())
-
-df["price"].plot(kind="hist")
-plt.title("Product Price Distribution")
-plt.xlabel("Price")
-plt.show()</code></pre>
-<p>Note: Replace the CSV filename with your actual dataset filename.</p>
-</section>
-
-<section id="powerbi">
-<h2>5. Power BI Dashboard</h2>
-<p>The dashboard can present product count, average price,
-brand comparisons, customer ratings and discounts.</p>
-<p><b>Dashboard Screenshot:</b> Add your Power BI dashboard
-screenshot to this section.</p>
-<p>To share an interactive dashboard, add your published
-Power BI report link here, if available.</p>
-</section>
-
-<section id="conclusion">
-<h2>6. Conclusion</h2>
-<p>This project demonstrates how e-commerce product data
-can be cleaned, analysed and visualised using Excel,
-PostgreSQL, Python and Power BI. The analysis helps
-understand product pricing, brands, ratings, reviews
-and discounts.</p>
-</section>
-
-<section>
-<h2>7. Project Files</h2>
-<p>Add links to your actual SQL queries, Python scripts,
-dataset and dashboard when you upload them to GitHub.</p>
-</section>
-</main>
-
-<footer>
-<p>E-Commerce Product Price & Review Analysis | Data Analytics Project</p>
-</footer>
+    <h2>Project Objectives</h2>
+    <ul>
+        <li>Analyse product prices and discounts.</li>
+        <li>Compare brands and customer ratings.</li>
+        <li>Perform data cleaning and EDA.</li>
+        <li>Create a Power BI dashboard.</li>
+    </ul>
 </body>
 </html>
