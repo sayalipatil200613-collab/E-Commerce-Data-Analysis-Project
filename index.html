@@ -1,195 +1,142 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>E-Commerce Data Analysis Project</title>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f7fb;
-            color: #333;
-        }
-
-        header {
-            background: linear-gradient(135deg, #142850, #27496d);
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        header h1 {
-            font-size: 32px;
-            margin-bottom: 10px;
-        }
-
-        nav {
-            background-color: #0f3460;
-            text-align: center;
-            padding: 15px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-
-        section {
-            background-color: white;
-            margin: 25px auto;
-            padding: 25px;
-            max-width: 900px;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px #ddd;
-        }
-
-        h2 {
-            color: #142850;
-            border-bottom: 2px solid #27496d;
-            padding-bottom: 8px;
-        }
-
-        .tools {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .tool {
-            background-color: #e3efff;
-            color: #142850;
-            padding: 12px 18px;
-            border-radius: 6px;
-            font-weight: bold;
-        }
-
-        li {
-            margin: 10px 0;
-        }
-
-        .button {
-            display: inline-block;
-            background-color: #142850;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 6px;
-            text-decoration: none;
-            margin-top: 10px;
-        }
-
-        footer {
-            background-color: #142850;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Commerce Data Analysis Project</title>
+<style>
+body{margin:0;font-family:Arial;background:#f4f6fa;color:#263247}
+header{background:#14213d;color:white;text-align:center;padding:35px 15px}
+nav{text-align:center;background:#243b60;padding:15px}
+nav a{color:white;margin:10px;text-decoration:none}
+main{max-width:950px;margin:auto;padding:20px}
+section{background:white;padding:22px;margin:20px 0;border-radius:10px}
+h2{color:#176b87}
+pre{background:#172033;color:#e7f1ff;padding:15px;overflow:auto;border-radius:6px}
+a{color:#087e8b}
+footer{text-align:center;padding:20px;background:#14213d;color:white}
+</style>
 </head>
-
 <body>
+<header>
+<h1>E-Commerce Product Price & Review Analysis</h1>
+<p>Data Analytics Project Using Flipkart Product Data</p>
+</header>
 
-    <header>
-        <h1>E-Commerce Data Analysis Project</h1>
-        <p>Flipkart Product Data Analysis and Visualization</p>
-        <p>Data Analysis | Business Insights | Interactive Dashboard</p>
-    </header>
+<nav>
+<a href="#about">About</a>
+<a href="#cleaning">Data Cleaning</a>
+<a href="#sql">SQL</a>
+<a href="#python">Python EDA</a>
+<a href="#powerbi">Power BI</a>
+<a href="#conclusion">Conclusion</a>
+</nav>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#tools">Tools</a>
-        <a href="#files">Project Files</a>
-        <a href="#insights">Insights</a>
-        <a href="#conclusion">Conclusion</a>
-    </nav>
+<main>
+<section id="about">
+<h2>1. Project Overview</h2>
+<p>This project analyses e-commerce product data collected
+from Flipkart to understand prices, brands, ratings,
+reviews and discounts.</p>
+<h3>Objectives</h3>
+<ul>
+<li>Analyse product prices and discounts.</li>
+<li>Compare brands and customer ratings.</li>
+<li>Identify popular products using review counts.</li>
+<li>Perform data cleaning and exploratory data analysis.</li>
+<li>Create an interactive Power BI dashboard.</li>
+</ul>
+<h3>Technologies Used</h3>
+<p>Microsoft Excel, PostgreSQL, SQL, Python, Pandas and Power BI.</p>
+</section>
 
-    <section id="about">
-        <h2>Project Overview</h2>
-        <p>
-            This project focuses on analyzing e-commerce product data
-            collected from Flipkart. The dataset contains product details
-            such as product names, categories, brands, prices, discounts,
-            ratings, review counts, seller information, and delivery details
-            where publicly available.
-        </p>
-        <p>
-            The purpose of this project is to understand product pricing,
-            discounts, customer ratings, and brand performance through
-            data analysis and visualization.
-        </p>
-    </section>
-    
-    <section id="dashboard">
-        <h2>Power BI Dashboard</h2>
-        <p>Flipkart E-commerce Data Analysis Dashboard</p>
-        <img src="Screenshot 2026-10-12 114645.png"
-            alt="Power BI Dashboard"
-            style="width:100%;
-    max-width:850px;
-    border-radius:10px;">
-    </section>
+<section id="cleaning">
+<h2>2. Data Cleaning & Preprocessing</h2>
+<ul>
+<li>Checked missing values.</li>
+<li>Identified duplicate records.</li>
+<li>Checked and corrected data types.</li>
+<li>Reviewed product names and categories for consistency.</li>
+<li>Prepared data for analysis.</li>
+</ul>
+</section>
 
-    <section id="tools">
-        <h2>Tools and Technologies</h2>
-        <div class="tools">
-            <div class="tool">Microsoft Excel</div>
-            <div class="tool">Python</div>
-            <div class="tool">SQL</div>
-            <div class="tool">Power BI</div>
-            <div class="tool">HTML</div>
-        </div>
-    </section>
+<section id="sql">
+<h2>3. SQL Analysis – PostgreSQL</h2>
+<p>Sample queries used for product analysis.</p>
+<h3>Display All Products</h3>
+<pre><code>SELECT *
+FROM ecommerce_products1;</code></pre>
+<h3>Total Products</h3>
+<pre><code>SELECT COUNT(*) AS total_products
+FROM ecommerce_products1;</code></pre>
+<h3>Average Product Price</h3>
+<pre><code>SELECT ROUND(AVG(price), 2) AS average_price
+FROM ecommerce_products1;</code></pre>
+<h3>Products by Brand</h3>
+<pre><code>SELECT brand, COUNT(*) AS product_count
+FROM ecommerce_products1
+GROUP BY brand
+ORDER BY product_count DESC;</code></pre>
+<h3>Highest Rated Products</h3>
+<pre><code>SELECT product_name, brand, price, rating
+FROM ecommerce_products1
+WHERE rating IS NOT NULL
+ORDER BY rating DESC
+LIMIT 10;</code></pre>
+</section>
 
-    <section id="files">
-        <h2>Project Files</h2>
-        <p>Explore the files used in this project:</p>
+<section id="python">
+<h2>4. Python – Exploratory Data Analysis</h2>
+<p>Python and Pandas are used to inspect the dataset,
+check missing values and analyse product prices.</p>
+<pre><code>import pandas as pd
+import matplotlib.pyplot as plt
 
-        <ul>
-            <li>Flipkart_Data.xlsx - Product dataset</li>
-            <li>ecommerce_products.csv - CSV dataset</li>
-            <li>ecommerce_eda.py - Python data analysis</li>
-            <li>Ecommerce_Analysis.sql - SQL queries</li>
-            <li>Ecommerce_Product_Analysis.pbix - Power BI dashboard</li>
-            <li>Flipkart_Ecommerce_Data_Analysis_Report1.pdf - Project report</li>
-        </ul>
+df = pd.read_csv("ecommerce_products.csv")
 
-        <a class="button"
-           href="https://github.com/sayalipatil200613-collab/E-Commerce-Data-Analysis-Project"
-           target="_blank">
-            View Project on GitHub
-        </a>
-    </section>
+print(df.head())
+print(df.info())
+print(df.isnull().sum())
+print(df.duplicated().sum())
+print(df.describe())
 
-    <section id="insights">
-        <h2>Business Insights</h2>
-        <ul>
-            <li>Analyze prices across different product categories.</li>
-            <li>Compare discounts offered on products.</li>
-            <li>Study product ratings and review counts.</li>
-            <li>Compare brands using product data.</li>
-            <li>Present findings through a Power BI dashboard.</li>
-        </ul>
-    </section>
+df["price"].plot(kind="hist")
+plt.title("Product Price Distribution")
+plt.xlabel("Price")
+plt.show()</code></pre>
+<p>Note: Replace the CSV filename with your actual dataset filename.</p>
+</section>
 
-    <section id="conclusion">
-        <h2>Conclusion</h2>
-        <p>
-            This project demonstrates how Excel, Python, SQL, and Power BI
-            can be used to organize, clean, analyze, and visualize
-            e-commerce product data. The analysis helps identify product
-            trends and present useful business insights.
-        </p>
-    </section>
+<section id="powerbi">
+<h2>5. Power BI Dashboard</h2>
+<p>The dashboard can present product count, average price,
+brand comparisons, customer ratings and discounts.</p>
+<p><b>Dashboard Screenshot:</b> Add your Power BI dashboard
+screenshot to this section.</p>
+<p>To share an interactive dashboard, add your published
+Power BI report link here, if available.</p>
+</section>
 
-    <footer>
-        <p>E-Commerce Data Analysis Project</p>
-        <p>Created by a BCA Student</p>
-    </footer>
+<section id="conclusion">
+<h2>6. Conclusion</h2>
+<p>This project demonstrates how e-commerce product data
+can be cleaned, analysed and visualised using Excel,
+PostgreSQL, Python and Power BI. The analysis helps
+understand product pricing, brands, ratings, reviews
+and discounts.</p>
+</section>
 
+<section>
+<h2>7. Project Files</h2>
+<p>Add links to your actual SQL queries, Python scripts,
+dataset and dashboard when you upload them to GitHub.</p>
+</section>
+</main>
+
+<footer>
+<p>E-Commerce Product Price & Review Analysis | Data Analytics Project</p>
+</footer>
 </body>
 </html>
